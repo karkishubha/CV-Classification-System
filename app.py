@@ -89,17 +89,17 @@ if "show_results" not in st.session_state:
     st.session_state.show_results = False
 
 # Create tabs for main functionality and samples
-tab1, tab2 = st.tabs(["📥 Classify Resume", "📚 Sample Resumes"])
+tab1, tab2 = st.tabs([" Classify Resume", " Sample Resumes"])
 
 with tab1:
     # Main input section
-    st.markdown("### 📥 Upload or Paste Your Resume")
+    st.markdown("###  Upload or Paste Your Resume")
     
     # Create two columns for input methods
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### 📤 Upload File")
+        st.markdown("####  Upload File")
         uploaded_file = st.file_uploader(
             "Choose a file (.txt or .pdf)",
             type=['txt', 'pdf'],
@@ -123,10 +123,10 @@ with tab1:
             
             if resume_content:
                 st.session_state.resume_content = resume_content
-                st.success("✅ File uploaded successfully!")
+                st.success("File uploaded successfully!")
     
     with col2:
-        st.markdown("#### 📝 Paste Text")
+        st.markdown("#### Paste Text")
         pasted_text = st.text_area(
             "Or paste your resume text here:",
             height=200,
@@ -139,7 +139,7 @@ with tab1:
     
     # Display extracted/pasted content
     if st.session_state.resume_content:
-        st.markdown("### 📋 Resume Content")
+        st.markdown("###  Resume Content")
         st.text_area(
             "Your resume content:",
             value=st.session_state.resume_content,
@@ -149,7 +149,7 @@ with tab1:
         )
         
         # Classification button
-        if st.button("🚀 Classify Resume", key="classify_btn", use_container_width=True):
+        if st.button("Classify Resume", key="classify_btn", use_container_width=True):
             with st.spinner("Classifying resume..."):
                 prediction = model.predict([st.session_state.resume_content])[0]
                 confidence = max(model.predict_proba([st.session_state.resume_content])[0])
@@ -163,7 +163,7 @@ with tab1:
     # Display classification results
     if st.session_state.show_results:
         st.divider()
-        st.markdown("### ✨ Classification Result")
+        st.markdown("###  Classification Result")
         
         col1, col2 = st.columns(2)
         
@@ -183,7 +183,7 @@ with tab1:
             elif prediction == 'Web':
                 st.markdown(f"""
                 <div class="result-box web-box">
-                <h3>🌐 Web Development</h3>
+                <h3>Web Development</h3>
                 <p><b>Category:</b> {prediction}</p>
                 <p><b>Confidence:</b> {confidence:.2%}</p>
                 </div>
@@ -191,7 +191,7 @@ with tab1:
             else:
                 st.markdown(f"""
                 <div class="result-box data-box">
-                <h3>📊 Data Science/Analytics</h3>
+                <h3>Data Science/Analytics</h3>
                 <p><b>Category:</b> {prediction}</p>
                 <p><b>Confidence:</b> {confidence:.2%}</p>
                 </div>
@@ -295,7 +295,7 @@ with tab2:
     # Display sample classification results
     if st.session_state.get("show_sample_results", False):
         st.divider()
-        st.markdown("### ✨ Classification Result")
+        st.markdown("###  Classification Result")
         
         res_col1, res_col2 = st.columns(2)
         
@@ -307,7 +307,7 @@ with tab2:
             if prediction == 'AI':
                 st.markdown(f"""
                 <div class="result-box ai-box">
-                <h3>🤖 AI/Machine Learning</h3>
+                <h3> AI/Machine Learning</h3>
                 <p><b>Category:</b> {prediction}</p>
                 <p><b>Confidence:</b> {confidence:.2%}</p>
                 </div>
@@ -315,7 +315,7 @@ with tab2:
             elif prediction == 'Web':
                 st.markdown(f"""
                 <div class="result-box web-box">
-                <h3>🌐 Web Development</h3>
+                <h3> Web Development</h3>
                 <p><b>Category:</b> {prediction}</p>
                 <p><b>Confidence:</b> {confidence:.2%}</p>
                 </div>
@@ -323,7 +323,7 @@ with tab2:
             else:
                 st.markdown(f"""
                 <div class="result-box data-box">
-                <h3>📊 Data Science/Analytics</h3>
+                <h3> Data Science/Analytics</h3>
                 <p><b>Category:</b> {prediction}</p>
                 <p><b>Confidence:</b> {confidence:.2%}</p>
                 </div>
@@ -336,4 +336,4 @@ with tab2:
                 st.progress(probs[i], text=f"{category}: {probs[i]:.2%}")
 
 st.markdown("---")
-st.markdown("Built with ❤️ using Streamlit | Resume Classification System v1.0")
+st.markdown("Built using Streamlit | Resume Classification System")
