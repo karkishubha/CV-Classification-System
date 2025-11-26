@@ -68,8 +68,14 @@ Classify resumes into three categories:
 def load_model():
     model_path = Path('models/resume_classifier.pkl')
     if not model_path.exists():
-        st.error("❌ Model file not found. Please run `python train_model.py` first.")
-        st.stop()
+        st.info("⏳ Training model for the first time. This may take a moment...")
+        import subprocess
+        try:
+            subprocess.run(['python', 'train_model.py'], check=True, capture_output=True)
+            st.success("✅ Model trained successfully!")
+        except Exception as e:
+            st.error(f"❌ Error training model: {str(e)}")
+            st.stop()
     
     with open(model_path, 'rb') as f:
         model = pickle.load(f)
