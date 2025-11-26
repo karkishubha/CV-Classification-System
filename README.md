@@ -4,7 +4,7 @@ A machine learning-powered Streamlit application that automatically classifies r
 
 ## 📋 Project Overview
 
-This project uses Natural Language Processing (NLP) and machine learning to analyze resume content and categorize them based on the skills and experience mentioned. The classification is performed using TF-IDF vectorization combined with a Naive Bayes classifier.
+This project uses Natural Language Processing (NLP) and machine learning to analyze resume content and categorize them based on the skills and experience mentioned. The classification is performed using TF-IDF vectorization combined with a Logistic Regression classifier, achieving 84.44% accuracy.
 
 ### Categories
 - **AI**: Artificial Intelligence, Machine Learning, Deep Learning, Neural Networks
@@ -31,10 +31,15 @@ This project uses Natural Language Processing (NLP) and machine learning to anal
 
 ## 📊 Model Details
 
-- **Algorithm**: Multinomial Naive Bayes
-- **Feature Extraction**: TF-IDF (Term Frequency-Inverse Document Frequency)
+- **Algorithm**: Logistic Regression
+- **Feature Extraction**: TF-IDF (Term Frequency-Inverse Document Frequency) with bigrams
+- **Accuracy**: 84.44% on test set
+- **Training Data**: 150 samples total (50 per category)
+- **Max Features**: 3000
+- **N-gram Range**: (1, 2) - unigrams and bigrams
 - **Framework**: scikit-learn
 - **Language**: Python
+- **Confidence Scores**: Supported via predict_proba
 
 ## 🚀 Quick Start
 
@@ -159,16 +164,24 @@ python train_model.py
 ## 🎓 How It Works
 
 1. **Text Preprocessing**: Resume text is cleaned and tokenized
-2. **Feature Extraction**: TF-IDF vectorizer converts text into numerical features
-3. **Classification**: Multinomial Naive Bayes classifier predicts the category
-4. **Confidence Scoring**: Probability scores are calculated for each category
+2. **Feature Extraction**: TF-IDF vectorizer (with unigrams and bigrams) converts text into 3000 numerical features
+3. **Classification**: Logistic Regression classifier predicts the category with probability estimates
+4. **Confidence Scoring**: Probability scores are calculated for each category using predict_proba
+5. **Pipeline**: Text vectorization and classification happen in a single scikit-learn Pipeline
 
 ## 📈 Model Performance
 
-The model is trained on representative samples from each category:
-- AI: Keywords like TensorFlow, PyTorch, deep learning, neural networks, NLP
-- Web: Keywords like React, JavaScript, Node.js, frontend, backend, HTML, CSS
-- Data: Keywords like SQL, Python, data analysis, Tableau, Power BI, analytics
+**Overall Accuracy**: 84.44%
+
+**Per-Category Performance**:
+- **AI**: 100% precision, 73% recall, 85% F1-score
+- **Data**: 82% precision, 93% recall, 88% F1-score
+- **Web**: 76% precision, 87% recall, 81% F1-score
+
+**Training Data**: 150 samples total (50 per category) with distinctive keywords:
+- AI: Machine Learning, Neural Networks, TensorFlow, PyTorch, NLP, Computer Vision, Deep Learning
+- Web: React, Node.js, Frontend, Backend, JavaScript, TypeScript, REST APIs, Docker, Kubernetes
+- Data: SQL, Python, Data Analysis, Tableau, Power BI, ETL, Apache Spark, Analytics
 
 ## 🚢 Deployment
 
