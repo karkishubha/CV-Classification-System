@@ -91,23 +91,23 @@ resume_classification/
 ## 📸 Screenshots
 
 ### Main Interface
-![Resume Classification System - Main Interface](https://github.com/karkishubha/CV-Classification-System/raw/main/screenshots/main_interface.png)
+![Resume Classification System - Main Interface](./screenshots/1_main_interface.png)
 *The main interface showing the classification options and categories*
 
 ### Upload/Paste Tab - File Upload
-![File Upload Example](https://github.com/karkishubha/CV-Classification-System/raw/main/screenshots/file_upload.png)
+![File Upload Example](./screenshots/2_file_upload.png)
 *Uploading a PDF resume file with automatic text extraction*
 
 ### Classification Results
-![Classification Results](https://github.com/karkishubha/CV-Classification-System/raw/main/screenshots/classification_results.png)
+![Classification Results](./screenshots/3_classification_results.png)
 *Web Development classification result showing confidence score and category probabilities*
 
 ### Sample Resumes Tab
-![Sample Resumes](https://github.com/karkishubha/CV-Classification-System/raw/main/screenshots/sample_resumes.png)
+![Sample Resumes](./screenshots/4_sample_resumes.png)
 *Sample resumes section with AI Engineer example*
 
 ### AI Classification Result
-![AI Classification](https://github.com/karkishubha/CV-Classification-System/raw/main/screenshots/ai_classification.png)
+![AI Classification](./screenshots/5_ai_classification.png)
 *AI/Machine Learning classification result showing 76.52% confidence*
 
 ## 💻 Usage
