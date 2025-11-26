@@ -34,9 +34,6 @@ This project uses Natural Language Processing (NLP) and machine learning to anal
 - **Algorithm**: Logistic Regression
 - **Feature Extraction**: TF-IDF (Term Frequency-Inverse Document Frequency) with bigrams
 - **Accuracy**: 84.44% on test set
-- **Training Data**: 150 samples total (50 per category)
-- **Max Features**: 3000
-- **N-gram Range**: (1, 2) - unigrams and bigrams
 - **Framework**: scikit-learn
 - **Language**: Python
 - **Confidence Scores**: Supported via predict_proba
