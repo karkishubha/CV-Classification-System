@@ -6,6 +6,7 @@ import pickle
 import os
 from pathlib import Path
 import PyPDF2
+from model_utils import ensure_model_exists
 
 # Set page configuration
 st.set_page_config(
@@ -66,17 +67,10 @@ Classify resumes into three categories:
 # Load the model
 @st.cache_resource
 def load_model():
-    model_path = Path('models/resume_classifier.pkl')
-    if not model_path.exists():
-        st.info("⏳ Training model for the first time. This may take a moment...")
-        import subprocess
-        try:
-            subprocess.run(['python', 'train_model.py'], check=True, capture_output=True)
-            st.success("✅ Model trained successfully!")
-        except Exception as e:
-            st.error(f"❌ Error training model: {str(e)}")
-            st.stop()
+    # Ensure model exists, train if necessary
+    ensure_model_exists()
     
+    model_path = Path('models/resume_classifier.pkl')
     with open(model_path, 'rb') as f:
         model = pickle.load(f)
     return model

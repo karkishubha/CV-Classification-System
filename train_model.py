@@ -211,8 +211,37 @@ model = Pipeline([
     ))
 ])
 
+def create_and_train_model():
+    """
+    Creates and trains the resume classification model.
+    Returns the trained pipeline model.
+    """
+    model = Pipeline([
+        ('tfidf', TfidfVectorizer(
+            max_features=3000,
+            min_df=1,
+            max_df=0.9,
+            ngram_range=(1, 2),
+            stop_words='english',
+            sublinear_tf=True,
+            use_idf=True,
+            smooth_idf=True
+        )),
+        ('classifier', LogisticRegression(
+            C=1.5,
+            max_iter=3000,
+            random_state=42,
+            class_weight='balanced',
+            solver='lbfgs',
+            n_jobs=-1
+        ))
+    ])
+    model.fit(X_train, y_train)
+    return model
+
+model = create_and_train_model()
+
 print("Training resume classification model with LogisticRegression...")
-model.fit(X_train, y_train)
 
 # Create models directory if it doesn't exist
 os.makedirs('models', exist_ok=True)
