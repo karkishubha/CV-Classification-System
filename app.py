@@ -144,8 +144,7 @@ with tab1:
             "Your resume content:",
             value=st.session_state.resume_content,
             height=200,
-            disabled=True,
-            key="content_preview"
+            disabled=True
         )
         
         # Classification button
