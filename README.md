@@ -111,31 +111,30 @@ resume_classification/
 
 ## 📸 Screenshots
 
-### Main Interface
-![Resume Classification System - Main Interface](./screenshots/1_main_interface.png)
-*The main interface showing the classification options and categories*
+> ### 🖥️ Main Interface  
+> ---
+> ![Resume Classification System - Main Interface](./screenshots/1_main_interface.png)  
+> *The main interface showing the classification options and categories*
 
+> ### 📤 Upload/Paste Tab – File Upload  
+> ---
+> ![File Upload Example](./screenshots/2_file_upload.png)  
+> *Uploading a PDF resume file with automatic text extraction*
 
-### Upload/Paste Tab - File Upload
-![File Upload Example](./screenshots/2_file_upload.png)
-*Uploading a PDF resume file with automatic text extraction*
+> ### 📊 Classification Results  
+> ---
+> ![Classification Results](./screenshots/3_classification_results.png)  
+> *Web Development classification result showing confidence score and category probabilities*
 
+> ### 📄 Sample Resumes Tab  
+> ---
+> ![Sample Resumes](./screenshots/4_sample_resumes.png)  
+> *Sample resumes section with AI Engineer example*
 
-### Classification Results
-![Classification Results](./screenshots/3_classification_results.png)
-*Web Development classification result showing confidence score and category probabilities*
-
-
-### Sample Resumes Tab
-![Sample Resumes](./screenshots/4_sample_resumes.png)
-*Sample resumes section with AI Engineer example*
-
-
-### AI Classification Result
-![AI Classification](./screenshots/5_ai_classification.png)
-*AI/Machine Learning classification result showing 76.52% confidence*
-
-
+> ### 🤖 AI Classification Result  
+> ---
+> ![AI Classification](./screenshots/5_ai_classification.png)  
+> *AI/Machine Learning classification result showing 76.52% confidence*
 ## 🔧 Development
 
 ### Training a Custom Model
