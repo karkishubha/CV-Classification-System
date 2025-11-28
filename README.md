@@ -109,32 +109,40 @@ resume_classification/
 3. Click "Classify Sample Resume"
 4. Observe how the model classifies different resume types
 
-## 📸 Screenshots
+## 🖼️ Overview
 
-> ### 🖥️ Main Interface  
-> ---
-> ![Resume Classification System - Main Interface](./screenshots/1_main_interface.png)  
-> *The main interface showing the classification options and categories*
+Below is an overview of the **Resume Classification System** interface and functionality:
 
-> ### 📤 Upload/Paste Tab – File Upload  
-> ---
-> ![File Upload Example](./screenshots/2_file_upload.png)  
-> *Uploading a PDF resume file with automatic text extraction*
+---
 
-> ### 📊 Classification Results  
-> ---
-> ![Classification Results](./screenshots/3_classification_results.png)  
-> *Web Development classification result showing confidence score and category probabilities*
+### 🖥️ Main Interface
+![Resume Classification System - Main Interface](./screenshots/1_main_interface.png)  
+*The main interface displaying classification options and categories.*
 
-> ### 📄 Sample Resumes Tab  
-> ---
-> ![Sample Resumes](./screenshots/4_sample_resumes.png)  
-> *Sample resumes section with AI Engineer example*
+---
 
-> ### 🤖 AI Classification Result  
-> ---
-> ![AI Classification](./screenshots/5_ai_classification.png)  
-> *AI/Machine Learning classification result showing 76.52% confidence*
+### 📤 Upload/Paste Tab – File Upload
+![File Upload Example](./screenshots/2_file_upload.png)  
+*Upload a PDF resume for automatic text extraction.*
+
+---
+
+### 📊 Classification Results
+![Classification Results](./screenshots/3_classification_results.png)  
+*Web Development classification result showing confidence scores and category probabilities.*
+
+---
+
+### 📄 Sample Resumes Tab
+![Sample Resumes](./screenshots/4_sample_resumes.png)  
+*View sample resumes, including an AI Engineer example.*
+
+---
+
+### 🤖 AI Classification Result
+![AI Classification](./screenshots/5_ai_classification.png)  
+*AI/Machine Learning classification result with 76.52% confidence.*
+
 ## 🔧 Development
 
 ### Training a Custom Model
