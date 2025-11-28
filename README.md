@@ -89,6 +89,25 @@ resume_classification/
 └── models/                  # Directory storing trained models
     └── resume_classifier.pkl # Trained model file
 ```
+## 💻 Usage
+
+### Method 1: Paste Resume Text
+1. Go to the "📝 Paste Resume" tab
+2. Copy and paste your resume content
+3. Click "Classify Resume"
+4. View the classification result and confidence scores
+
+### Method 2: Upload File
+1. Go to the "📤 Upload File" tab
+2. Upload a .txt file containing your resume
+3. Click "Classify Uploaded Resume"
+4. View the results
+
+### Method 3: Test with Samples
+1. Go to the "📋 Sample Resumes" tab
+2. Select a sample resume from the dropdown
+3. Click "Classify Sample Resume"
+4. Observe how the model classifies different resume types
 
 ## 📸 Screenshots
 
@@ -111,26 +130,6 @@ resume_classification/
 ### AI Classification Result
 ![AI Classification](./screenshots/5_ai_classification.png)
 *AI/Machine Learning classification result showing 76.52% confidence*
-
-## 💻 Usage
-
-### Method 1: Paste Resume Text
-1. Go to the "📝 Paste Resume" tab
-2. Copy and paste your resume content
-3. Click "Classify Resume"
-4. View the classification result and confidence scores
-
-### Method 2: Upload File
-1. Go to the "📤 Upload File" tab
-2. Upload a .txt file containing your resume
-3. Click "Classify Uploaded Resume"
-4. View the results
-
-### Method 3: Test with Samples
-1. Go to the "📋 Sample Resumes" tab
-2. Select a sample resume from the dropdown
-3. Click "Classify Sample Resume"
-4. Observe how the model classifies different resume types
 
 ## 🔧 Development
 
@@ -196,24 +195,6 @@ python train_model.py
 - **AWS EC2**: Run with Nginx reverse proxy
 - **Docker**: Containerize the application
 
-## 📝 Example
-
-**Input Resume:**
-```
-Full Stack Developer with expertise in React, Node.js, MongoDB.
-Built responsive web applications using HTML5, CSS3, JavaScript.
-Experience with Redux for state management and REST APIs.
-```
-
-**Output:**
-```
-Category: Web
-Confidence: 95.3%
-Probabilities:
-- Web: 95.3%
-- AI: 3.2%
-- Data: 1.5%
-```
 
 ## 🤝 Contributing
 
