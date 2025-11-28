@@ -188,10 +188,12 @@ python train_model.py
 | Web      | 76%       | 87%    | 81%      |
 
 
-**Training Data**: 150 samples total (50 per category) with distinctive keywords:
-- AI: Machine Learning, Neural Networks, TensorFlow, PyTorch, NLP, Computer Vision, Deep Learning
-- Web: React, Node.js, Frontend, Backend, JavaScript, TypeScript, REST APIs, Docker, Kubernetes
-- Data: SQL, Python, Data Analysis, Tableau, Power BI, ETL, Apache Spark, Analytics
+**Training Data**: Balanced dataset across three categories with distinctive keywords:
+
+- **AI**: Machine Learning, Neural Networks, TensorFlow, PyTorch, NLP, Computer Vision, Deep Learning  
+- **Web**: React, Node.js, Frontend, Backend, JavaScript, TypeScript, REST APIs, Docker, Kubernetes  
+- **Data**: SQL, Python, Data Analysis, Tableau, Power BI, ETL, Apache Spark, Analytics
+
 
 
 ## 🤝 Contributing
