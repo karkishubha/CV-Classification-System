@@ -173,31 +173,17 @@ python train_model.py
 
 **Overall Accuracy**: 84.44%
 
-**Per-Category Performance**:
-- **AI**: 100% precision, 73% recall, 85% F1-score
-- **Data**: 82% precision, 93% recall, 88% F1-score
-- **Web**: 76% precision, 87% recall, 81% F1-score
+| Category | Precision | Recall | F1-Score |
+|----------|-----------|--------|----------|
+| AI       | 100%      | 73%    | 85%      |
+| Data     | 82%       | 93%    | 88%      |
+| Web      | 76%       | 87%    | 81%      |
+
 
 **Training Data**: 150 samples total (50 per category) with distinctive keywords:
 - AI: Machine Learning, Neural Networks, TensorFlow, PyTorch, NLP, Computer Vision, Deep Learning
 - Web: React, Node.js, Frontend, Backend, JavaScript, TypeScript, REST APIs, Docker, Kubernetes
 - Data: SQL, Python, Data Analysis, Tableau, Power BI, ETL, Apache Spark, Analytics
-
-## 🚢 Deployment
-
-### Deploy on Streamlit Cloud
-
-1. Push your code to GitHub
-2. Visit [Streamlit Cloud](https://streamlit.io/cloud)
-3. Click "New app" and select your repository
-4. Configure the app settings
-5. Deploy!
-
-### Deploy on Other Platforms
-
-- **Heroku**: Use `Procfile` and buildpacks
-- **AWS EC2**: Run with Nginx reverse proxy
-- **Docker**: Containerize the application
 
 
 ## 🤝 Contributing
